@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-gen-2017, 9.43.19
+    Author     : tss
+*/
+
+body {background-image: url("sfondo1.jpg") ; background-size: 100%; background-position:  center top}
+div.title div{ display:inline ;margin-left: 60px ; background-color: white}
+div.title{border: solid 1px black ; text-align: center ; background-color: white }
+
+
+
+
+
+dropbtnHome {border: none ; cursor: pointer}

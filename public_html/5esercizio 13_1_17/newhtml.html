@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="cerca" > Ricerca: </label>
+            <input type="text" style="width: 120px "   size="10" name="cerca" placeholder="Parola da cercare!" id="cerca" > 
+
+        </form>
+
+   
+    <form>
+
+        <table border = "2">
+            <caption>
+        <p>Iscrizione alla palestra</p>
+    </caption>
+            <tr >
+                <td align = "center" width = "100"  height = "100" > <label for="nome"> Nome: </label> </td>
+                <td align = "center" width = "200"  height = "100"> <input type ="text" style="width: 120px "   size="10" value="Inserire nome" placeholder="Inserire nome!" id="nome" > </td>
+                <td rowspan="10" align = "center" width = "200"  height = "100"> <input type="submit" value="Invio" name="pulsanteInvio" style="width: 150px ; height: 150px ; font-size:xx-large ">  </td>
+
+
+            </tr>
+            <tr>
+                <td align = "center" width = "100"  height = "100"> <label for="email">     Email: </label>   </td>
+                <td align = "center" width = "200"  height = "100">  <input type ="text"  style="width: 120px " value="Inserire email" id="email" >    </td>
+            </tr>
+
+            
+            
+            <tr>
+                <td align = "center" width = "100"  height = "100"> <label for="Nazionalità"> Nazionalità: </label> </td>
+                        <td align = "center" width = "200"  height = "100"> 
+                            <select name="Nazionalità" size="1" id="Nazionalità"  style="width: 200px">
+                                <option value="0" selected  name="//" disabled="" >  </option>
+                                <optgroup label="Unione Europea">
+                                <option value="1"  name="POR"> portoghese </option>
+                                <option value="2"  name="SPA"> spagnola </option>
+                                <option value="3"  name="IT"> italiana </option>
+                                </optgroup>
+                                <optgroup label="America">          
+                                <option value="4"  name="CAN"> canada </option>
+                                <option value="5"  name="MEX"> messico </option>
+                                <option value="6"  name="ARG"> argentina </option>
+                                </optgroup>
+                                <optgroup label="Asia">
+                                <option value="7"  name="GP"> giappone </option>
+                                <option value="8"  name="RU"> russa </option>
+                                <option value="9"  name="CIN"> cina </option>
+                                </optgroup>
+                                
+                            </select>     
+                        </td>
+                
+                
+            </tr>
+
+            <tr>
+                <td  align = "center" width = "100"  height = "100" > <label for="password"> Password: </label>    </td>
+                <td  align = "center" width = "200"  height = "100" > <input type ="password"   style="width: 120px " size="10" value="123" id="password">    </td>
+
+
+
+
+            </tr>
+
+            <tr>
+                <td align = "center" width = "100"  height = "100"> Sesso: </td>
+                <td align = "left" width = "200"  height = "100"> <input type="radio" name="Sesso" id="sessoM" value=" m"> <label for="sessoM"> Uomo</label> <div> </div> 
+                    <input type="radio" name="Sesso" id="sessoF" value = "f"> <label for="sessoF"> Donna </label></td>
+            </tr>
+
+
+            <tr>
+                <td align = "center" width = "100"  height = "100"> Sport:  </td>
+                <td align = "left" width = "200"  height = "100"> <input type="checkbox" id="sport1"> <label for="sport1"> Nuoto </label> <div> </div> 
+                    <input type="checkbox" id="sport2"> <label for="sport2"> Calcio </label> <div> </div> 
+                    <input type="checkbox" id="sport3"> <label for="sport3">Tennis  </label> <div> </div> 
+                    <input type="checkbox" id="sport4"> <label for="sport4">Golf </label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td align = "center"  width = "100"  height = "100"> Data di sto corso fantasmagoricamente nervoso</td>
+                <td align = "center">
+                    <input type="date" name="bdaytime" value="2015-01-17">
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td align = "center" width = "100"  height = "100"> Tipo di browser: </td>
+                <td align = "center" width = "100"  height = "100"> 
+                    <input list="browser" name="browser" value="safari" placeholder="Indicare il browser">
+                    <datalist id="browser">
+                        <option value ="internet explorer">
+                        <option value ="firefox">
+                        <option value ="chrome">
+                        <option value ="mozzilla">
+                        
+                    </datalist>
+                    
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td align = "center" width = "100"  height = "100"> <label for="temperatura">Temperatura: </label></td>
+                <td align = "center"><input type="range" name="Temperatura" min="0" max="100" value="10" id="temperatura"> 
+                </td>
+                
+            </tr>
+            
+            <tr>
+                <td align = "center" width = "100"  height = "100"> <label for="colore"> di che colore hai la faccia di cazzo </label></td>
+                <td align = "center">
+                    <input type="color" name="color" value="#654235" id="colore" style="width: 200px ; height: 50px">
+                </td>
+                
+                
+            </tr>
+            <tr>
+                <td><label for="note"> Note</label></td>
+                <td>
+                    <textarea cols="40" rows="6" name="note" id="note" placeholder="Inserisci qui le note"></textarea>
+                </td>
+                 <td align = "center" width = "100"  height = "100">
+                    <input type="reset" value="Reset" name="pulsanteReset">
+                   
+                </td>
+
+            </tr>
+            <tr>
+                <td align = "center" width = "100"  height = "100" colspan="3" style="text-align: center">
+                    
+                    <button> esempio di pulsante <br> su due righe</button>
+                </td>
+               
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

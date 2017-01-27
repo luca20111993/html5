@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-gen-2017, 9.34.08
+    Author     : tss
+*/
+
+     
+      td {text-align: center ;width :25px;  height: 25px}
+      .glav {background-color: #99ffff}
+      .gfest {background-color: #ff6666}
+      table#mesi3{border-spacing: 10px 10px}
+      .gripet {color: #999999}
+      #titolo { background-color: #99ff99}
+      .gsabdom {color:#ff6666}

@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-gen-2017, 10.25.32
+    Author     : tss
+*/
+
+
+
+            td {  text-align: center ;width :50px;  height: 50px}
+            .base {color:red}
+            #vuoto {color: green ; background-image: url("socute.jpg") ; background-size:100%,100%  }
+            .pari{ background-color: #66ffcc}
+            .dispari {background-color: #ccff33}
+            #doggy{ background-image: url("socute.jpg") ; background-size:100%,100% }
+            #doggy2{background-image: url("socute2.jpg") ; background-size:100%,100%}
+            table {border-spacing: 10px 10px ;
+                   border: solid ; border-width: 30px ; border-left-color: brown ;border-top-color: yellow ;
+                   border-right-color: chartreuse ; border-bottom-color:teal         }
+            
+            
+             
+           
+            
+        

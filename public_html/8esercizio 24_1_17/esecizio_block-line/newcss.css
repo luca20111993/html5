@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-gen-2017, 13.54.46
+    Author     : tss
+*/
+
+ 
+div#es { background-color: burlywood ; border: solid 2px black ; width: auto ; height: auto ; overflow: hidden}
+
+div#es div {display:block ; padding: 5px ; outline: solid 5px cornflowerblue /*; float:left*/ ; border-radius: 20px;
+            box-shadow: 3px 3px 10px aqua }
+
+
+/*Esempio posizione relative*/
+div#es div:nth-child(1) { position: relative; left:50px ; top: 50px ; border-color: #339900 ; background-color: #ffffff}
+
+/*Absolute ha necessità di top e left altrimenti sovrascrive in maniera che non ho capito*/
+div#es div:nth-child(2){position:absolute ; top:0px ; left: 0px}
+
+div.grande.rosso {width: 400px ; background-color: #ff3333 ; margin: 5px 5px 5px 0px ;
+                  border-style: solid ; border-color: black ; border-width: 2px 2px 2px 2px}
+
+div.piccolo.rosso {width: 200px ; background-color: #ff3333  ; margin: 5px 5px 5px 0px ;
+                   border-style: solid ; border-color: black ; border-width: 2px 2px 2px 2px}
+
+div.grande.verde {width: 400px ; background-color: #33ff33  ; margin: 5px 5px 5px 0px ;
+                  border-style: solid ; border-color: black ; border-width: 2px 2px 2px 2px}
+
+div.piccolo.verde {width: 200px ; background-color: #33ff33  ; margin: 5px 5px 5px 0px ;
+                   border-style: solid ; border-color: black ; border-width: 2px 2px 2px 2px ; border-right: solid 50px blue}
