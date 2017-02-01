@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-gen-2017, 17.36.40
+    Author     : tss
+*/
+
+
+div#ImmTel { float: left ; background-image: url("telecomando2.0.jpg") ; height:450px ; width: 350px }
+
+div#tele { float: right ; border: solid 1px black ; background-color: black ; height: 600px ; width: 300px  ; border-radius: 20px}
+
+div#tele div#off {   float:left ; background-color: red ; height: auto ; width: auto ; margin-left: 130px ; margin-top:  10px ; border-radius:  40%}
+
+
+div#tele div#a {background-color: orange ; width: 30px ; height: 20px ; text-align: center ; margin-left: 51px}
+
+div#tele div#b {background-color:aqua ; width: 30px ; height: 20px ; text-align: center}
+
+div#tele div#c {background-color: #33ff33 ; width: 30px ; height: 20px ; text-align: center}
+
+div#tele div#d {background-color: #ff6666 ; width: 30px ; height: 20px ; text-align: center}
+
+div#tele div { float:left ; background-color: white ; height: 20px ; width: 20px ; margin-left: 10px ; margin-right: 10px ; text-align: center}
+
+div#tele div.telnum {  border: solid 1px white ; color: white ; background-color: black}
+div#tele div#n1 {margin-left: 90px}
+div#tele div#n4 {margin-left: 90px}
+div#tele div#n7 {margin-left: 90px}
+div#tele div#n-- {margin-left: 90px}
+
+div#tele div#tsu { margin-left: 118px ; width: 50px ; height: 20px ; border-top-left-radius: 20px ; border-top-right-radius: 20px }
+div#tele div#tsx { margin-left:93px ;height: 30px ; border-top-left-radius: 10px ; border-bottom-left-radius: 10px}
+
+div#tele div#tok {margin-top: 8px ; border-radius: 5px}
+
+div#tele div#tdx { height: 30px ; border-top-right-radius:  10px ; border-bottom-right-radius: 10px}
+div#tele div#tgiu { margin-left:118px ; width: 50px ; height: 20px ; border-bottom-left-radius: 20px ; border-bottom-right-radius: 20px}
+
+
+p#num11   {display: none; background-color:black ; position:absolute ; top:300px ; left: 300px ; color:  black}
+td.telnum:hover  p#num11 { display: block ; border: solid 1px black}
+
+div#tele div#telepag1{ margin-left: 100px}
+div#tele div#telepiu {margin-left:68px }
+
+div#tele div#telepag2 {margin-left: 100px}
+div#tele div#telemeno{ margin-left:68px}
+
+div#tele div#telemu { margin-left: 115px}
+
+
+div#tele div#pp {margin-left: 94px}
+
+div#tele div#tondo1 { margin-left: 94px }
+
+

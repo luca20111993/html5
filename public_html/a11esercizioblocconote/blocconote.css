@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31-gen-2017, 14.48.59
+    Author     : tss
+*/
+
+div#container {border: solid 1px black ; width: 800px ; height: 500px }
+
+div#barra1 { position: relative ;    border-bottom: solid 1px black; width: auto ; height: 20px ; }
+
+
+div#icona {float:left }
+div#nomefile {float:left}
+div#spacing {float:left}
+div#nomeprogramma {float:left}
+
+div#Ricona {float:right ; border-right: 30px ; margin-right: 45px}
+div#Rgrande {float:right ; margin-right: 45px}
+div#Rexit {float:right}
+
+div#barra2{position: relative  ; width: auto ; height: 20px ; margin: 0px}
+div.bar2 {float:left ; }
+div.bar2  {margin-right: 40px ; margin-bottom: 0px ; padding:0px ; margin-top: 0px}
+div.bar2:hover {background-color: blue}
+
+div#foglio {border-bottom: solid 1px black ; border-right: solid 1px black ; border-top: solid 1px black ; width: 99.6% ; height: 90.9%}
+
+
+
+div#file {height:auto}
+div#file ul{ display: none ;}
+div#file ul li:hover {background-color: aqua }
+div#file:hover ul { position:absolute ; display:block ; left: -40px ; top:5px; list-style: none}
+
+

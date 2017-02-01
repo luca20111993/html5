@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-gen-2017, 17.36.40
+    Author     : tss
+*/
+
+
+#tel { background-image: url("telecomando.jpg") ;  background-size: 100% 100%}
+.tabImm td { width: 400px ; height: 450px}
+
+.tabTel {background-color: black ; position:relative;}
+.tabTel tr {align-content: center}
+
+
+.tabTel td { width: 30px ; height: 30px ; background-color: white}
+tr.num td{ position: relative ; left:18px ; top:0px }
+
+.tabTel td#off{ position: relative; left:55px ; top: 0px ; text-align: center}
+.tabTel td#off:hover{ background-color: red}
+p#compOff {display: none; background-color: red ; position:absolute ; top:100px ; left: 150px}
+.tabTel td#off:hover p#compOff {display: block ; border: solid 1px black }
+
+p#bA {display: none; background-color: orange ; position:absolute ; top:580px ; left: 250px}
+td.abcd:hover p#bA { display: block ; border: solid 1px black}
+
+
+p#bB {display: none; background-color: aqua ; position:absolute ; top:580px ; left: 250px}
+td.abcd:hover p#bB { display: block ; border: solid 1px black}
+
+p#bC {display: none; background-color: #99ff99 ; position:absolute ; top:580px ; left: 250px}
+td.abcd:hover p#bC { display: block ; border: solid 1px black}
+
+p#bD {display: none; background-color:#ff6666 ; position:absolute ; top:580px ; left: 250px}
+td.abcd:hover p#bD { display: block ; border: solid 1px black}
+
+
+
+p#num11   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num11 { display: block ; border: solid 1px black}
+
+p#num22   {display: none; background-color:black ; position:absolute ; top:40px ; left: 182px ; color:  white}
+td.numeri:hover  p#num22 { display: block ; border: solid 1px black}
+
+p#num33   {display: none; background-color:black ; position:absolute ; top:40px ; left: 146px ; color:  white}
+td.numeri:hover  p#num33 { display: block ; border: solid 1px black}
+
+p#num44   {display: none; background-color:black ; position:absolute ; top:3px ; left: 220px ; color:  white}
+td.numeri:hover  p#num44 { display: block ; border: solid 1px black}
+
+p#num55   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num55 { display: block ; border: solid 1px black}
+
+p#num66   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num66 { display: block ; border: solid 1px black}
+
+p#num77   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num77 { display: block ; border: solid 1px black}
+
+p#num88   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num88 { display: block ; border: solid 1px black}
+
+p#num99   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num99 { display: block ; border: solid 1px black}
+
+p#num---   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num--- { display: block ; border: solid 1px black}
+
+p#num00   {display: none; background-color:black ; position:absolute ; top:40px ; left: 220px ; color:  white}
+td.numeri:hover  p#num00 { display: block ; border: solid 1px black}
+
+p#numMM   {display: none; background-color:black ; position:absolute ; top:660px ; left: 220px ; color:  white}
+td.numeri:hover  p#numMM { display: fixed ; border: solid 1px black}
