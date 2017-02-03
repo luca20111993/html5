@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-feb-2017, 11.15.08
+    Author     : tss
+*/
+
+
+body{
+    counter-reset: Sezione 0;
+    
+}
+
+h1:before {
+    counter-increment: Sezione 1;
+    content: counter(Sezione)  'Sezione';
+}

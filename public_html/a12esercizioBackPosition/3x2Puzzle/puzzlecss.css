@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-feb-2017, 8.50.36
+    Author     : tss
+*/
+
+td {width: 200px ; height: 200px ; border: solid 1px black }
+table {border: solid 1px black ; }
+
+.dog { background-image: url("dogepuzzle.jpg") ; background-repeat: no-repeat}
+
+#positionleft{ background-position: 0px 0px ;}
+#positionmiddle{background-position: -200px 0px;}
+#positionright{background-position: -400px 0px}
+
+#positionleftB{background-position: 0px -200px ;}
+#positionleftM{background-position: -200px -200px;}
+#positionleftR{background-position: -400px -200px;}
+

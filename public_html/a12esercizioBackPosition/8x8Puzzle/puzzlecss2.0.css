@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-feb-2017, 9.17.17
+    Author     : tss
+*/
+
+table{border: 1px solid black ; }
+td{ border: 1px solid black ; width: 200px; height:  100px ;  background-image: url("doge2.0.jpg") ; background-repeat: no-repeat ; position: relative}
+
+tr td:nth-child(1) { background-position-x: 0px;}
+tr td:nth-child(2) { background-position-x:-200px;}
+tr td:nth-child(3) { background-position-x:-400px;}
+tr td:nth-child(4) { background-position-x:-600px;}
+tr td:nth-child(5){ background-position-x:-800px;}
+tr td:nth-child(6){background-position-x:-1000px;}
+tr td:nth-child(7) { background-position-x:-1200px;}
+tr td:nth-child(8) { background-position-x:-1400px;}
+
+table tr:nth-child(1) td { background-position-y: 0px}
+table tr:nth-child(2) td { background-position-y:-100px;}
+table tr:nth-child(3) td{background-position-y:-200px;}
+table tr:nth-child(4) td{background-position-y:-300px;}
+table tr:nth-child(5) td{background-position-y:-400px;}
+table tr:nth-child(6) td{background-position-y:-500px;}
+table tr:nth-child(7) td{background-position-y:-600px;}
+table tr:nth-child(8) td{background-position-y:-700px;}
+
+tr:nth-child(1) td:nth-child(1):hover p#p1 {display: block}
+tr:nth-child(1) td:nth-child(1):hover {opacity: 0.5 ; }
+table tr:nth-child(1) td:nth-child(1) p#p1 {display: none ; font-family: cursive ; font-size: xx-large ; position: absolute ; z-index: 4; top: 50px ; left:400px }
+
+
+
+
