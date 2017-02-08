@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7-feb-2017, 13.47.39
+    Author     : tss
+*/
+div#container {
+    position: fixed ; 
+    top: 300px ; 
+    left:300px
+}
+
+div#container div {
+    display: inline-block ;
+    font-style: italic ;
+    font-size: 30px ;
+    width: 150px ; 
+    height: 100px;
+    vertical-align: text-top;
+    text-align: center;
+    line-height: 100px  ;    /*      <---------- diocane le bestemmie , se messo con stessa altezza della height butta il testo a metà*/
+
+transition: all 2s
+}
+
+div#container div:hover  {
+    font-size: 100px;
+    color: blue;
+    
+   
+    
+}
+
+
+
+.red{border: 1px red solid}

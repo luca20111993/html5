@@ -8,12 +8,49 @@ and open the template in the editor.
     Author     : tss
 */
 
-body {background-image: url("sfondo1.jpg") ; background-size: 100%; background-position:  center top}
-div.title div{ display:inline ;margin-left: 60px ; background-color: white}
-div.title{border: solid 1px black ; text-align: center ; background-color: white }
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
 
 
 
 
+div.title div{  display:inline ;margin-left: 60px ; background-color: white}
+div.title{border: solid thin black ; text-align: center ; background-color: white ; white-space:nowrap }
 
-dropbtnHome {border: none ; cursor: pointer}
+
+
+
+div#SChome {position: relative}
+div#SCpae{position:relative}
+div#SCcont{position: relative}
+div#SCrit{position: relative}
+div#SCme{position: relative}
+
+
+div#SChome:hover ul {display: block ; position:absolute ; list-style: none ; left: 0px ; top: 3px}
+div#SCpae:hover ul {display:block ; position: absolute ; list-style: none ; left:0px ; top:3px}
+
+div#SCcont:hover ul {display:block ; position: absolute ; list-style: none ; left:0px ; top:3px}
+div#SCrit:hover ul {display:block ; position: absolute ; list-style: none ; left:0px ; top:3px}
+div#SCme:hover ul {display:block ; position: absolute ; list-style: none ; left:0px ; top:3px}
+
+
+ul {display: none ; padding-left: 0px ; }
+li{width:  150px ; text-align: left ; padding-top: 2px ; padding-bottom: 2px}
+ 
+div.titleH:hover { background-color: #99ffff }
+
+
+
+
+div ul li:hover span {background-color: #99ffff}
+
+
+
+
+.rr {
+    background-color: #ff9999 ; 
+    border: 1px solid red}
+/*-------------------*/
