@@ -54,3 +54,12 @@ div ul li:hover span {background-color: #99ffff}
     background-color: #ff9999 ; 
     border: 1px solid red}
 /*-------------------*/
+
+div#imgM {border: 1px black solid ; width: 300px ; height: 300px ; float: right ; margin-top: 10px ; background-image: url("java1.jpg")}
+
+/*-------------------*/
+div#ContainerTxt {border:1px black solid ; width: 300px ; height: 300px ; margin-top: 10px}
+
+div#ContainerTxt p {margin:0px ; padding:0px; font-size: small}
+
+div#ContainerTxt p#title { font-size:medium ; text-align: center}
