@@ -1,0 +1,175 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-feb-2017, 8.59.54
+    Author     : tss
+*/
+
+div#animaz {width: 50px ; 
+            height: 50px;
+            background-color: red;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 50px;
+
+            position: absolute;
+            top:500px; left: 50px;
+
+
+            animation-name: example;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {background-color:red; left:50px; top:500px;}
+    20%  {background-color:yellow; left:300px; top:100px;}
+    40%  {background-color:blue; left:800px; top:300px;}
+    60%  {background-color:green; left:700px; top:700px;}
+    80%  {background-color:red; left:200px; top:600px;}
+    100% {background-color: red ; left:50px ; top:500px}
+}
+
+
+/*----------------------*/
+
+div#animaz1 {width: 50px ; 
+             height: 50px;
+             background-color: red;
+             border: 1px black solid;
+             text-align: center;
+             line-height: 50px;
+
+             position: absolute;
+             top:500px; left: 50px;
+
+             animation-name: runrun;
+             animation-duration: 8s;
+             animation-direction: alternate;
+             animation-iteration-count: infinite;
+
+
+
+             border-radius: 50px
+}
+
+@keyframes runrun {
+    0%   {background-color:#ff66ccd; left:50px; top:500px;}
+    20%  {background-color:darkseagreen; left:300px; top:100px;}
+    40%  {background-color:darkgoldenrod; left:800px; top:300px;}
+    60%  {background-color:hotpink; left:700px; top:700px;}
+    80%  {background-color:lightcoral; left:200px; top:600px;}
+    100% {background-color: #ff66ccd ; left:50px ; top:500px}
+}
+
+
+/*----------------------*/
+
+
+div#animaz2 {width: 50px ; 
+             height: 50px;
+             background-color: red;
+             border: 1px black solid;
+             border-radius: 999999999999999999999999999999999px 999999999999999999999999999999999999px 0px 0px;
+             text-align: center;
+             line-height: 50px;
+
+             position: absolute;
+             top:500px; left: 50px;
+
+             animation-name: runrunrun;
+             animation-duration: 20s;
+             animation-direction: alternate;
+             animation-iteration-count: infinite;
+
+
+
+
+
+}
+
+
+
+@keyframes runrunrun {
+    0%   {background-color:chartreuse; left:50px; top:500px;}
+    20%  {background-color:#000000; left:300px; top:100px;}
+    40%  {background-color:yellow; left:800px; top:300px;}
+    60%  {background-color:#ff9900; left:700px; top:700px;}
+    80%  {background-color:paleturquoise; left:200px; top:600px;}
+    100% {background-color: chartreuse ; left:50px ; top:500px}
+}
+
+
+
+
+
+
+
+
+/*----------------------*/
+
+
+div#animaz3 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 43.3px 25px;
+    border-color: transparent transparent #00d9ff transparent;
+
+    position: absolute;
+    top:500px; left: 50px;
+
+    animation-name: runrunrunrun;
+    animation-duration: 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+
+
+@keyframes runrunrunrun {
+    0%   { left:50px; top:500px;}
+    20%  { left:300px; top:100px;}
+    40%   {left:800px; top:300px;}
+    60%  {left:700px; top:700px;}
+    80%  { left:200px; top:600px;}
+    100% { left:50px ; top:500px}
+}
+
+/*----------------------*/
+
+div.brum {font-size: medium}
+
+
+
+/*----------------------*/
+
+div.brum:hover {
+    animation-play-state: paused ; 
+    z-index: 10        }
+
+
+/*----------------------*/
+
+
+div#container {width: 150px ;
+               height: 30px; 
+               border: 1px black dashed; 
+
+               background-color: #ff6666 ; 
+               position: absolute;
+               top:10px ; left:200px;
+
+               text-align: center;
+               line-height: 30px;
+               
+               font-size: xx-large
+                }
+
+
+div#container:hover div.brum {animation-play-state:paused;}
