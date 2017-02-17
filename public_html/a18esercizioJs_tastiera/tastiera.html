@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>prototipo tastiera</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="tastieraCss.css" rel="stylesheet" >
+
+
+        <script>
+
+            function aggiungitesto(x) {
+                var testo = x;
+
+                document.getElementById("text").innerHTML += x;
+            }
+
+
+            function cancella() {
+
+                var deleteItem = document.getElementById('text');
+                deleteItem.innerHTML = deleteItem.innerHTML.substring(0, deleteItem.innerHTML.length - 1);
+
+            }
+
+            function rip() {
+
+                var x = confirm("Sei sicuro di voler cancellare il testo?\n yay or nay?");
+
+                if (x === true) {
+                    var deleteItem = document.getElementById('text');
+                    deleteItem.innerHTML = ""
+                }
+                ;
+
+            }
+
+            /* metodo non buono ma funziona
+            function immagine(x) {
+                var html = '<p class="' + x + '"> </p> ';
+
+                document.getElementById("text").innerHTML += html;
+            }
+             */
+            
+            
+            function aggiungimmagine (nomefile){
+            
+            var html = "<img src=" + nomefile + " width = '15'  height = '15'>"
+            
+            aggiungitesto(html)
+            
+            
+            }
+            
+                
+
+
+        </script>
+    </head>
+    <body>
+
+        <div id="container" style="position: relative">
+
+            <div id="text" ></div>
+
+            <br> <br>
+
+
+            <input class="button " id="btnQ" type="button" value="Q"  onclick="aggiungitesto('Q')"> 
+            <input class="button" id="btnW" type="button" value="W"  onclick="aggiungitesto('W')"> 
+            <input class="button" id="btnE" type="button" value="E"  onclick="aggiungitesto('E')"> 
+            <input class="button" id="btnR" type="button" value="R"  onclick="aggiungitesto('R')"> 
+            <input class="button" id="btnT" type="button" value="T"  onclick="aggiungitesto('T')"> 
+            <input class="button" id="btnY" type="button" value="Y"  onclick="aggiungitesto('Y')"> 
+            <input class="button" id="btnU" type="button" value="U"  onclick="aggiungitesto('U')"> 
+            <input class="button" id="btnI" type="button" value="I"  onclick="aggiungitesto('I')"> 
+            <input class="button" id="btnO" type="button" value="O"  onclick="aggiungitesto('O')"> 
+            <input class="button" id="btnP" type="button" value="P"  onclick="aggiungitesto('P')">
+            <input class="buttonS" id="btnDEL" type="button" value="<---"  onclick="cancella()">
+
+            <br>
+
+
+            <input class="button" id="btnA" type="button" value="A"  onclick="aggiungitesto('A')"> 
+            <input class="button" id="btnS" type="button" value="S"  onclick="aggiungitesto('S')"> 
+            <input class="button" id="btnD" type="button" value="D"  onclick="aggiungitesto('D')"> 
+            <input class="button" id="btnF" type="button" value="F"  onclick="aggiungitesto('F')"> 
+            <input class="button" id="btnG" type="button" value="G"  onclick="aggiungitesto('G')"> 
+            <input class="button" id="btnH" type="button" value="H"  onclick="aggiungitesto('H')"> 
+            <input class="button" id="btnJ" type="button" value="J"  onclick="aggiungitesto('J')"> 
+            <input class="button" id="btnK" type="button" value="K"  onclick="aggiungitesto('K')">
+            <input class="button" id="btnL" type="button" value="L"  onclick="aggiungitesto('L')">
+
+            <br>
+
+            <input class="button" id="btnZ" type="button" value="Z"  onclick="aggiungitesto('Z')">
+            <input class="button" id="btnX" type="button" value="X"  onclick="aggiungitesto('X')">
+            <input class="button" id="btnC" type="button" value="C"  onclick="aggiungitesto('C')">
+            <input class="button" id="btnV" type="button" value="V"  onclick="aggiungitesto('V')">
+            <input class="button" id="btnB" type="button" value="B"  onclick="aggiungitesto('B')">
+            <input class="button" id="btnN" type="button" value="N"  onclick="aggiungitesto('N')">
+            <input class="button" id="btnM" type="button" value="M"  onclick="aggiungitesto('M')">
+            <input class="button" id="btnVIRGOLA" type="button" value=","  onclick="aggiungitesto(',')">
+            <input class="button" id="btnPUNTO" type="button" value="."  onclick="aggiungitesto('.')">
+
+            <BR>
+            <input class="buttonS" id="btnSPACE" type="button" value="SPACE"  onclick="aggiungitesto('    ')">
+            <input class="buttonS" id="btnCAPO" type="button" value="ENTER"  onclick="aggiungitesto('<br>')">
+
+
+            <input id="btnDEAD" type="button" onclick="rip()" style="border: 0px">
+
+
+
+
+            <div id="containerEmoticon"> EMOTICONS:
+                <input id="btnSHIBA1" type="button" onclick="aggiungimmagine('shiba1.jpg')" style="border: 0px">
+                <input id="btnSHIBA2" type="button" onclick="aggiungimmagine('shiba2.jpeg')" style="border: 0px">
+                <input id="btnCORGI1" type="button" onclick="aggiungimmagine('corgi1.png')" style="border: 0px">
+                
+            </div>
+
+
+
+        </div>
+
+    </body>
+</html>

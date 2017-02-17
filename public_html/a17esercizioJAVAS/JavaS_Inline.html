@@ -6,24 +6,143 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+
+        <script>
+
+            function inverti() {
+                alert("Funzione inverti lanciata!");
+                /* var = variabile locale*/
+
+                var resp = prompt('Inserire frase da invertire.', '');
+
+                /* typeoff indica che tipo di variabile gli abbiamo inserito*/
+                /*alert (typeof r);*/
+
+                /* Facendo questo var lunghezza mi permette di dirmi quanto è lunga in numer la stringa resp*/
+                var lunghezza = resp.length;
+
+                /*Facendoq uesto var avrò una risposta boolean true o false*/
+                var boo = resp.length > 5;
+
+                //Creo un'alert dove ci metto una risposta. il typeof della lunghezza mi dirà number  non string.
+                alert("hai scritto " + resp + "\nlunghezza " + lunghezza + " di tipo " + (typeof lunghezza) +
+                        "\n aggiungo controllo t/f  " + boo + "\n e controllo il tipo di dato  " + (typeof boo));
+
+
+                /*faccio un if dove dico che se il valore "boolean" è stato rispettato faccio una cosa diversamente ne faccio un'altra*/
+                if (boo) {
+                    alert("il nome ha una lunghezza ok")
+                } else {
+                    alert("nome troppo corto")
+                }
+
+
+                /*Con questo car ci prendiamo il carattere scelto nelle parentesi e lo visualizziamo con l'alert*/
+                var car = resp.charAt(3);      //PRENDE IL QUARTO CARATTERE. ATTENZIONE.
+                alert("4° carattere: " + car);
+
+
+                /* Facciamo il ciclo per invertire la frase ; uso ciclo for.*/
+                var tot = "";
+                for (var i = resp.length - 1; i >= 0; i--) {
+                    var letter = resp.charAt(i);
+                    tot = tot + letter;
+                }
+                alert("reverse   __    " + tot);
+            }
+
+
+
+
+
+            /* Dopo tutti i pasticci sopra estraiamo la fnzione reverse dove chiediamo in input un parametro x*/
+            /* NON VIAUSLIZZA NIENTE È GENERALE.*/
+            
+            /* PRENDE PARAMETRO STRING E RITORNA PARAMETRO STRING.*/
+            function reverse(x) {
+
+                var s = "";
+                /*Se il parametro è diverso da string da errore in console.*/
+                if (typeof x != "string") {
+                    console.log("errore nei parametri")
+                } else {
+                    /*Altrimenti fa ciclo for*/
+                    for (var i = x.length - 1; i >= 0; i--) {
+                        s += x.charAt(i)
+                    }
+
+                    return s;
+                }
+            }
+                /*Funzione che prende un testo da input text e la gira facendola ridisplayare nello stesso text*/
+                function scriviInverso(){
+                    
+                    //document ci permettere di andare a prendere il text con id nomeUtente e considerarne il testo cioè la value
+                    var scritta = document.getElementById("nomeUtente").value;
+                    
+                    //alert("Cos'hai scritto: -> " + scritta);
+                    
+                    var rev = reverse(scritta)
+                    
+                    //alert("Scritta al contrario: -> " + rev);
+                    
+                    //Ci ributtiamo dentro rev cioè la nostra frase girata
+                    document.getElementById("nomeUtente").value = rev
+                    
+    }
+                
+                /*Funzione per la somma di due numeri*/
+                function somma2Numeri (){
+                    //Chiedo in input i due numeri
+                    var a = prompt ("primo numero")
+                    var b = prompt ("secondo numero")
+                    //Arrivano come string quindi li trasformo in interi e gli specifico la base, solitamente 10
+                    var n1 = parseInt(a , 10)
+                    var n2 = parseInt(b , 10)
+                    
+                    alert (n1+n2)
+                    
+                    
+                }
+                
+                
+            
+        </script>
+
+
+
+        <title>alert - confirm - prompt</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <input type="button" 
                value="alert"
-               onclick="alert ('Mannaggia a te hai sbagliato. \n per andare a capo usa\n -- slash n --')"> 
-        
+               onclick="alert('Mannaggia a te hai sbagliato. \n per andare a capo usa\n -- slash n --')"> 
+
         <input type="button"
                value="confirm"
                onclick="confirm('hai sbagliato dinuovo!!!')">
-        
-        
+
+
         <input type="button"
                value="prompt"
-               onclick=" r=prompt('Inserisci il tuo nome' , 'questo è il default e anche risposta') ; alert(r) "     > <!--  la risposta funziona da default e da risposta quando 
-                                                                                                                       vado a richiamare l'allert r>>
+               onclick=" r = prompt('Inserisci il tuo nome', 'questo è il default e anche risposta');
+                       alert(r)"     > <!--  la risposta funziona da default e da risposta quando 
+                                                                                                                       vado a richiamare l'allert r -->
+
+
+
+
+        <p onclick="inverti()" style="position: absolute ; top: 300px ; left:300px;">funzione inverso</p>
         
+        
+        
+        
+        
+        <input style="position: absolute ; top: 400px ; left:300px;" type="text" id="nomeUtente"> 
+        <input style="position: absolute ; top: 400px ; left:450px;" type="button" value="cliccami" onclick="scriviInverso()">
+        
+        <p onclick="somma2Numeri()" style="position: absolute ; top: 500px ; left:300px;">Cliccami per sommare</p>
     </body>
 </html>

@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-feb-2017, 9.03.55
+    Author     : tss
+*/
+
+#text { width: 500px ; 
+        height: 60px ; 
+        border: 1px black solid ;
+        margin: 0 auto;
+        margin-top: 5px}
+
+.button {width: 30px ; 
+         height: 30px; 
+         margin-left: 5px ; 
+         margin-right: 5px; 
+         margin-bottom: 10px}
+
+
+
+input#btnSPACE {margin-left: 40px; 
+                width: 300px ; 
+                height: 30px;
+                margin-left: 140px}
+
+input#btnCAPO {width: 50px ; 
+               height: 70px}
+
+input#btnDEL {width: 65px ; 
+              height: 30px;
+              margin-left: 8px}
+
+#container {border: thin gray solid ; 
+            width: 600px ; 
+            height: 300px ; 
+            position: fixed ; 
+            top: 200px ; 
+            left: 400px}
+
+#btnDEAD { width: 70px ;
+           height: 70px ; 
+           position: fixed ; top:250px ; left: 1100px ; 
+           background-image: url("rip.jpg") ; 
+           background-repeat: no-repeat ; 
+           background-size: 70px 70px
+}
+
+
+/*------doggyes------*/
+
+#containerEmoticon{ text-align: center;
+                    position: fixed ; top:560px ; left:550px}
+
+#btnSHIBA1{
+    width: 70px;height: 70px;
+    background-image: url(shiba1.jpg);
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    position:fixed ; top: 600px ; left:480px;
+}
+
+#btnSHIBA2{
+    width: 70px;height: 70px;
+    background-image: url(shiba2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    position:fixed ; top: 600px ; left:580px;
+}
+
+#btnCORGI1{
+    width: 70px;height: 70px;
+    background-image: url(corgi1.png);
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    position:fixed ; top: 600px ; left:670px;
+}
+
+
+
+/*-----piccoli dogy---- METODO OBSOLETO
+
+.shiba1small {
+    width: 15px ; height: 15px;
+    background-image: url(shiba1.jpg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    display: inline-block  ; margin:0;
+    
+
+}
+
+.shiba2small {
+    width: 15px ; height: 15px;
+    background-image: url(shiba2.jpeg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    display: inline-block  ; margin:0;
+}
+
+.corgi1small{
+    width: 15px ; height: 15px;
+    background-image: url(corgi1.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    display: inline-block  ; margin:0;
+}
+*/
+
+
+/*----posizione tasti-------*/
+
+#btnQ {margin-left: 75px}
+
+#btnA {margin-left: 89px}
+
+#btnZ {margin-left: 100px}
+
+#btnCAPO {position: absolute ; top:145px ; left:530px}
