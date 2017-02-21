@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="TabellaCss3.0.css" rel="stylesheet" >
+        <script>
+
+
+
+
+
+
+            function CreaTabella() {
+
+                var empty = ""
+
+                var righ = parseInt(document.getElementById("txtRig").value);
+
+                var col = parseInt(document.getElementById("txtCol").value);
+
+
+                var tbl = "<table style=\"border: 1px black solid\">";
+
+                for (var i = 0; i < righ; i++) {
+
+                    tbl += "<tr style=\"border: 1px black solid\">";
+
+                    for (var j = 0; j < col; j++) {
+
+                        tbl += "<td   style=\"width: 50px ; height: 50px\ ;\n\
+                                              border: 1px black solid\"> </td>";
+
+                    }
+
+                    tbl += "</tr>";
+
+                }
+                tbl += "</table>";
+                document.getElementById("tabella").innerHTML = tbl;
+                
+                
+            }
+
+
+
+            function report(){
+                var righ = (document.getElementById("txtRig").value);
+                var col = (document.getElementById("txtCol").value);
+                
+                var report = "Creata una tabella con n°colonne: " + col + "\ne n° righe: " + righ;
+                document.getElementById("report").innerHTML = report;
+                
+                document.getElementById("txtRig").value = empty;
+                document.getElementById("txtCol").value = empty;
+            }
+
+
+        </script>
+    </head>
+    <body>
+        
+        
+        
+        
+        <div id="container" >
+            
+            <div id="containerUser" >
+                <p id="colP" >&nbsp;Inserire il numero <br>&nbsp;di colonne</p>
+                <input id="txtCol"  type="text" value=""  >
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p id="rigP">&nbsp;Inserire il numero <br>&nbsp;di righe</p>
+                <input id="txtRig"  type="text" value=""  >
+                
+                <input id="creaTab"  type="button" value="Creazione Tabella" onclick="CreaTabella() , report()" >
+                
+                
+                
+                <p id="report"></p>
+                
+            </div>
+            
+            
+            
+            <div id="tabella"   ></div>
+                
+        </div>
+        
+        
+        
+        
+
+        
+
+
+
+    </body>
+</html>

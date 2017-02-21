@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="profCss.css" rel="stylesheet" >
+
+        <script>
+
+
+            function creaTabellaHTML(righe, colonne, fz) {
+                righe = parseInt(righe)
+                colonne = parseInt(colonne)
+                var html = "<table>"
+                for (var i = 0; i < righe; i++) {
+                    html += "<tr>"
+                    for (var j = 0; j < colonne; j++) {
+                        html += "<td>"
+                        html += fz(i, j)
+                        html += "</td>"
+                    }
+                    html += "</tr>"
+                }
+
+                html += "</table>"
+                return html
+            }
+
+            function crea() {
+                var r = document.getElementById("numRighe").value;
+                var c = document.getElementById("numColonne").value;
+
+                var t = creaTabellaHTML(r, c,
+                        function (riga, colonna) {
+                            return (riga + 1) * (colonna + 1)
+                        })
+
+                document.getElementById("lavagna").innerHTML = t;
+            }
+
+
+
+        </script>
+    </head>
+    <div id="comandi">
+        <label for="numRighe">Righe:</label>
+        <input type="text" id="numRighe" value="10">
+        <label for="numColonne">Colonne:</label>
+        <input type="text" id="numColonne" value="10">
+        <input type="button" value="CREA" onclick="crea()" id="pCrea">
+    </div>
+    <div id="lavagna"></div>
+</html>
