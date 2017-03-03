@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3-mar-2017, 9.14.28
+    Author     : tss
+*/
+
+
+
+#container {
+    display: block;
+    border: 1px solid black;
+    width: 650px;
+    height: 500px;
+    position: absolute;
+    top: 60px;
+    left: 70px;
+}
+
+#tabella{
+    width: 500px;
+    height: 50px;
+    
+}
+
+
+#tabella table{
+    margin: 0 auto;
+    margin-top: 33px;
+border-collapse: collapse;    
+    
+    
+}
+
+
+ #tabella table tr td {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/*----tabella 2----*/
+
+#tabella2 {
+    position: absolute;
+    top: 0px;
+    left: 501px;
+    float: right;
+    width: 150px;
+    height: 500px;
+    border-left:  1px solid black;
+}
+#tabella2 table{
+    margin: 0 auto;
+    margin-top: 3px;
+    border-spacing: 3px;
+    
+}
+
+#tabella2 table tr td {
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    
+}
+
+#tabella2 table tr:nth-child(1) td{
+    background-color: blue
+}
+
+#tabella2 table tr:nth-child(2) td {
+    background-color:    #33ff33;
+}                                      
+
+#tabella2 table tr:nth-child(3) td {
+    background-color: #00ffff
+}
+
+#tabella2 table tr:nth-child(4) td {
+    background-color: #999999
+}
+
+#tabella2 table tr:nth-child(5) td{
+    background-color: burlywood
+}
+
+#tabella2 table tr:nth-child(6) td{
+    background-color: #ffcccc
+}
+
+#tabella2 table tr:nth-child(7) td{
+    background-color: #ccccff
+}
+
+#tabella2 table tr:nth-child(8) td{
+    background-color: #ffff66
+}
+#tabella2 table tr:nth-child(9) td{
+    background-color: #00cccc
+}
+#tabella2 table tr:nth-child(10) td{
+    background-color: #666600
+}

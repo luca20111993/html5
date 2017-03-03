@@ -9,8 +9,8 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/Uncompressed.js" type="text/javascript"></script>
-        <link href="TabellaqueryCss.css" rel="stylesheet" >
+        <script src="Uncompressed.js" type="text/javascript"></script>
+        <link href="PaintCon.DataCss.css" rel="stylesheet" >
         <script>
 
             function creaTabellaHTML(righe, colonne, fz) {
@@ -31,9 +31,9 @@ and open the template in the editor.
                 return html
             }
 
-            function crea() {
-                var r = 30
-                var c = 30
+            function crea10x10() {
+                var r = 10
+                var c = 10
 
                 var t = creaTabellaHTML(r, c,
                         function (riga, colonna) {
@@ -43,30 +43,54 @@ and open the template in the editor.
                 )
                 document.getElementById("tabella").innerHTML = t;
             }
-            
-            
+
+            function crea10x1() {
+                var r = 10
+                var c = 1
+
+                var t = creaTabellaHTML(r, c,
+                        function (riga, colonna) {
+
+                            return ""
+                        }
+                )
+                document.getElementById("tabella2").innerHTML = t;
+
+            }
         </script>
     </head>
     <body>
-        
-        <div id="tabella" ></div>
+
+        <div id="container"> 
+
+            <div id="tabella"></div>
+
+
+            <div id="tabella2"></div>
+
+
+
+        </div>
 
 
 
 
 
         <script>
-            crea10x10()
-            
-            
-            
-            
-            
-            
-            $("#tabella  table td").click(function(){
-                $(this).css("background-color" , "red")
-                
+            crea10x10();
+            crea10x1();
+
+
+ 
+            $("#tabella2 table tr td").click(function () {
+                var cc = $(this).css("background-color"); //Prima leggo colore di sfondo e lo salvo come variabile cc
+                $("body").data("coloreScelto" , cc); //Mi ricordo di questo colore salvandolo sul body come "colore scelto"
             })
-        </script>
+
+            $("#tabella  table td").click(function () {
+               $(this).css("background-color", $("body").data("coloreScelto" )) //Setto il background del td scelto andandomi a ricordare che colore è stato salvato sotto "coloreScelto"
+
+            })
+        </script> 
     </body>
 </html>

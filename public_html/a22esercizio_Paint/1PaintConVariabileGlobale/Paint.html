@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Uncompressed.js" type="text/javascript"></script>
+        <link href="PaintCss.css" rel="stylesheet" >
+        <script>
+
+            function creaTabellaHTML(righe, colonne, fz) {
+                righe = parseInt(righe)
+                colonne = parseInt(colonne)
+                var html = "<table>"
+                for (var i = 0; i < righe; i++) {
+                    html += "<tr>"
+                    for (var j = 0; j < colonne; j++) {
+                        html += "<td>"
+                        html += fz(i, j)
+                        html += "</td>"
+                    }
+                    html += "</tr>"
+                }
+
+                html += "</table>"
+                return html
+            }
+
+            function crea10x10() {
+                var r = 10
+                var c = 10
+
+                var t = creaTabellaHTML(r, c,
+                        function (riga, colonna) {
+
+                            return ""
+                        }
+                )
+                document.getElementById("tabella").innerHTML = t;
+            }
+
+            function crea10x1() {
+                var r = 10
+                var c = 1
+
+                var t = creaTabellaHTML(r, c,
+                        function (riga, colonna) {
+
+                            return ""
+                        }
+                )
+                document.getElementById("tabella2").innerHTML = t;
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="container"> 
+
+            <div id="tabella"></div>
+
+
+            <div id="tabella2"></div>
+
+
+
+        </div>
+
+
+
+
+
+        <script>
+            crea10x10();
+            crea10x1();
+
+            var cc;
+            var bc;
+
+
+            $("#tabella2 table tr td").click(function () {
+                
+                var boo = confirm("Sei sicuro di voler cambiare colore?");
+                
+                if(boo == true){
+                $("#tabella2 table tr td").css("border-color" , "black")
+                
+                $(this).css ("border" , "2px solid red");
+                
+                
+                cc = $(this).css("background-color");}
+            
+            })
+
+
+
+
+            $("#tabella  table tr td").click(function () {
+                var base = $(this).css("background-color") //Leggo colore base
+                
+                
+                if(base == "transparent" ){
+                    $(this).css("background-color", cc)}
+                
+                
+                if(base == cc){
+                    $(this).css("background-color" , "transparent")
+                }
+                
+                
+                if(base != "transparent" && base != cc){
+                    var boo = confirm("Sei sicuro di voler cambiare colore?");
+                    if(boo == true){
+                        $(this).css("background-color", cc)
+        }
+                
+                    
+    }
+            })
+        </script> 
+    </body>
+</html>
