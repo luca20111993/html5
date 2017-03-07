@@ -86,15 +86,14 @@ and open the template in the editor.
 
             $("#tabella2 table tr td").click(function () {
                 
-                var boo = confirm("Sei sicuro di voler cambiare colore?");
                 
-                if(boo == true){
+                
+                
                 $("#tabella2 table tr td").css("border-color" , "black")
                 
                 $(this).css ("border" , "2px solid red");
                 
-                
-                cc = $(this).css("background-color");}
+                cc = $(this).css("background-color");
             
             })
 

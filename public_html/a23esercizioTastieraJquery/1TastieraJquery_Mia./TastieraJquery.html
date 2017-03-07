@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="TastieraJqueryCss.css" rel="stylesheet" >
+        <script src="Uncompressed.js" type="text/javascript"></script>
+
+        <script>
+            function creaTabellaHTML(righe, colonne, fz) {
+                righe = parseInt(righe)
+                colonne = parseInt(colonne)
+                var html = "<table>"
+                for (var i = 0; i < righe; i++) {
+                    html += "<tr>"
+                    for (var j = 0; j < colonne; j++) {
+                        html += "<td>"
+                        html += fz(i, j)
+                        html += "</td>"
+                    }
+                    html += "</tr>"
+                }
+
+                html += "</table>"
+                return html
+            }
+
+            function crea10x1() {
+                var r = 10
+                var c = 1
+
+                var t = creaTabellaHTML(r, c,
+                        function (riga, colonna) {
+
+                            return ""
+                        }
+                )
+                document.getElementById("tabella2").innerHTML = t;
+
+            }
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="pulsanteAccesoSpento">Proprietà: 
+            <span>Acceso</span>
+            <span>Spento</span>
+        </div>
+
+        <div id="tabella2"></div>
+        <span id="cTesto">Cambia colore testo</span>
+        <br> <br>
+        <span id="cSfondo">Cambia sfondo testo</span>
+
+        <div id="scrollBarSiNo">Scroll: 
+            <span>Si</span>/
+            <span>No</span>
+        </div>
+
+        <div id="OmbraSiNo">Ombreggiatura: 
+            <span>Si</span>/
+            <span>No</span>
+        </div>
+
+        <div id="container">
+
+            <div id="video"></div>
+
+            <div id="tastiera13">
+                <div class="tasto">1</div>
+                <div class="tasto">2</div>
+                <div class="tasto">3</div>
+            </div>
+
+            <div id="tastiera46">
+
+                <div class="tasto">4</div>
+                <div class="tasto">5</div>
+                <div class="tasto">6</div>
+            </div>
+
+            <div id="tastiera79">
+                <div class="tasto">7</div>
+                <div class="tasto">8</div>
+                <div class="tasto">9</div>
+            </div>
+
+            <div id="tastiera0">
+                <div class="tastoce" id="t0">CE</div>
+                <div class="tasto">0</div>
+                <div class="tasto-"> <--- </div>
+            </div>
+            <div>
+
+
+            </div>
+        </div> 
+
+
+        <script>
+
+            crea10x1();
+
+
+
+            $("#tabella2 table tr td").click(function () {
+
+                $("#tabella2 table tr td").css("border-color", "black")
+
+                $(this).css("border", "2px solid red");
+
+                var cc = $(this).css("background-color");
+
+                $("body").data("coloreScelto", cc);
+
+            })
+
+            //COMANDI PER CAMBIARE COLORE TESTO O SFONDO 
+
+            $("#cTesto").click(function () {
+
+                $("#cSfondo").css("font-weight", "normal")
+                $("#cTesto").css("font-weight", "bold")
+
+                var cs = $("body").data("coloreScelto")
+                $("#video").css("color", cs)
+
+            })
+
+
+            $("#cSfondo").click(function () {
+
+                $("#cSfondo").css("font-weight", "bold")
+                $("#cTesto").css("font-weight", "normal")
+
+                var cs = $("body").data("coloreScelto")
+                $("#video").css("background-color", cs)
+
+            })
+
+
+
+            //COMANDI PER I TASTI
+
+            $(".tasto").click(function () {
+                var letto = $(this).html();
+                var content = $("#video").html();
+                $("#video").html(content + letto)
+            })
+
+
+
+            $(".tastoce").click(function () {
+                $("#video").html("")
+            })
+
+
+            $(".tasto-").click(function () {
+
+                var n = $("#video").html().length - 1
+
+                var nuova = $("#video").html().substring(0, n)
+
+                $("#video").html(nuova);
+            })
+
+
+            //COMANDI SCROLLBAR
+
+            $("#scrollBarSiNo span:nth-child(1)").click(function () {
+
+                $("#scrollBarSiNo span:nth-child(1)").css("font-weight", "bold")
+                $("#scrollBarSiNo span:nth-child(2)").css("font-weight", "normal")
+
+                $("#video").css("overflow", "scroll")
+
+
+
+            })
+
+
+            $("#scrollBarSiNo span:nth-child(2)").click(function () {
+
+                $("#scrollBarSiNo span:nth-child(1)").css("font-weight", "normal")
+                $("#scrollBarSiNo span:nth-child(2)").css("font-weight", "bold")
+
+                $("#video").css("overflow", "hidden")
+
+            })
+
+
+            //Comandi ombreggiature
+
+
+            $("#OmbraSiNo span:nth-child(1)").click(function () {
+
+                $("#OmbraSiNo span:nth-child(1)").css("font-weight", "bold")
+                $("#OmbraSiNo span:nth-child(2)").css("font-weight", "normal")
+
+                $("#video").css("text-shadow", "10px 10px 5px #222222")
+
+
+
+            })
+
+
+            $("#OmbraSiNo span:nth-child(2)").click(function () {
+
+                $("#OmbraSiNo span:nth-child(1)").css("font-weight", "normal")
+                $("#OmbraSiNo span:nth-child(2)").css("font-weight", "bold")
+
+                $("#video").css("text-shadow", "10px 10px 5px transparent")
+
+            })
+
+
+
+
+
+            //PER CAMBIARE LA CLASSE!!!!
+            $(".pulsanteAccesoSpento").click(function () {
+                if ($(this).hasClass("acceso"))
+                    $(this).removeClass("acceso")
+                else
+                    $(this).addClass("acceso")
+
+
+            })
+
+
+        </script>
+    </body>
+
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Tastiera_ProfCss.css" rel="stylesheet" >
+        <script src="Uncompressed.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="contenitore">
+            <div id="lavagna">ciao!!!</div>
+
+            <div class="numeri">1</div>
+            <div class="numeri">2</div>
+            <div class="numeri">3</div>
+            <div class="numeri">4</div>
+            <div class="numeri">5</div>
+            <div class="numeri">6</div>
+            <div class="numeri">7</div>
+            <div class="numeri">8</div>
+            <div class="numeri">9</div>
+            <div class="numeri">0</div>
+            <br><br>
+
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+            <div class="colori"></div>
+
+            <div id="cancella">C</div>
+            <div id="cancellaUltimo">CE</div>
+            <div id="cambiaSfondoTesto">
+                <span>Sfondo</span>/
+                <span>Testo</span>
+            </div>
+
+        </div>
+
+        <script>
+            $(".numeri").click(function () {
+                //var n = $(this).text() //numero scritto sul tasto cliccato
+                var giaScritto = $("#lavagna").html()
+                //$("#lavagna").html(giaScritto + n)
+                $("#lavagna").html($("#lavagna").html() + $(this).text())
+            })
+
+            $("#cancellaUltimo").click(function () {
+                var giaScritto = $("#lavagna").html()
+
+                var nuovaStringa = giaScritto.substring(0, giaScritto.length - 1)
+                $("#lavagna").html(nuovaStringa)
+            })
+
+            $("#cancella").click(function () {
+                var r = confirm("sei sicuro?")
+                if (!r) {
+                    return;
+                }
+                $("#lavagna").html("")
+            })
+
+            $(".colori").each(function (i, elm) {
+                var v = ["red", "green", "blue", "orange", "brown", "white", "black", "magenta", "aqua", "yellow"]
+                $(elm).css("background-color", v[i])
+            })
+
+            $(".colori").click(function () {
+                var colore = $(this).css("background-color")
+                if (target == "Testo") {
+                    $("#lavagna").css("color", colore)
+                } else {
+                    $("#lavagna").css("background-color", colore)
+                }
+
+            })
+
+            var target = "Sfondo"
+            $("#cambiaSfondoTesto").click(function () {
+                if (target == "Sfondo") {
+                    $("#cambiaSfondoTesto span:nth-child(1)").css("font-weight", "normal")
+                    $("#cambiaSfondoTesto span:nth-child(2)").css("font-weight", "bold")
+                    target = "Testo"
+                } else {
+                    $("#cambiaSfondoTesto span:nth-child(1)").css("font-weight", "bold")
+                    $("#cambiaSfondoTesto span:nth-child(2)").css("font-weight", "normal")
+                    target = "Sfondo"
+                }
+            })
+        </script>
+    </body>
+</html>
