@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="LavagnaCss.css" rel="stylesheet" >
+        <script src="Uncompressed.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="lavagnaC">
+            <div id="lavagna">Ciao cambia il carattere del testo</div>
+        </div>
+
+
+        <div class="pulsanteCGS">Cambia carattere testo: 
+            <span>Corsivo</span> / 
+            <span>Grassetto</span> / 
+            <span>Sottolineato</span>
+        </div>
+
+        <script>
+            
+            $(".pulsanteCGS span:nth-child(1)").click(function () {
+                if ($(".pulsanteCGS").hasClass("corsivo"))
+                    $("pulsanteCGS").removeClass("corsivo")
+                else
+                    $(this).addClass("corsivo")
+
+
+            })
+
+        
+
+        </script>
+    </body>
+</html>
