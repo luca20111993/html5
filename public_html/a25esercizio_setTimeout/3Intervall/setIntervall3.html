@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="setIntervallCss3.css" rel="stylesheet" >
+        <script src="Uncompressed.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+
+
+        <input id="ferma" type="button" value="FERMATI STOLTO PASTORELLO"><BR>
+
+
+        <input id="up" type="button" value="Su"> <br>
+        <input id="bck" type="button" value="Sinistra"><br>
+        <input id="corri" type="button" value="Destra"><BR>
+
+        <input id="dwn" type="button" value="Giu"> <br>
+
+        <BR> <br>
+
+
+        <div id="img"></div>
+
+
+
+
+
+
+
+
+        <script>
+
+
+
+            var lft = 0;
+            var tp = 200;
+
+
+
+            var inter = 0;
+            var inter2 = 0;
+            var inter3 = 0;
+            var inter4 = 0;
+
+            $("#ferma").click(function () {
+
+                clearInterval(inter);
+                clearInterval(inter2);
+                clearInterval(inter3);
+                clearInterval(inter4);
+                
+                
+                $("#corri").removeAttr("disabled")
+                $("#bck").removeAttr("disabled")
+                $("#up").removeAttr("disabled")
+                $("#dwn").removeAttr("disabled")
+            })
+
+
+            $("#corri").click(function () {
+                
+                $("#corri").attr("disabled", "disabled")
+                $("#bck").attr("disabled", "disabled")
+                
+                inter = setInterval(function () {
+                    $("#img").css("left", lft);
+                    lft = lft + 1;
+
+                }, 20)
+
+            })
+
+
+
+            $("#bck").click(function () {
+                
+                $("#corri").attr("disabled", "disabled")
+                $("#bck").attr("disabled", "disabled")
+
+                inter2 = setInterval(function () {
+                    
+                    $("#img").addClass("rotateSX")
+                    
+                    $("#img").css("left", lft);
+                    lft--;
+
+                    if (lft < 0) {
+                        clearInterval(inter);
+                        clearInterval(inter2);
+                    }
+                }, 20)
+
+
+            })
+
+            $("#up").click(function () {
+                
+                $("#up").attr("disabled", "disabled")
+                $("#dwn").attr("disabled", "disabled")
+
+                inter3 = setInterval(function () {
+                    $("#img").css("top", tp);
+                    tp--;
+
+                }, 20)
+
+            })
+            
+            
+            
+            $("#dwn").click(function () {
+                
+                $("#up").attr("disabled", "disabled")
+                $("#dwn").attr("disabled", "disabled")
+
+
+                inter4 = setInterval(function () {
+                    $("#img").css("top", tp);
+                    tp++;
+
+                }, 20)
+
+            })
+
+
+
+
+        </script>
+    </body>
+</html>

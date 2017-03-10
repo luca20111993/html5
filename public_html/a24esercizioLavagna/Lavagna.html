@@ -24,18 +24,52 @@ and open the template in the editor.
             <span>Sottolineato</span>
         </div>
 
+
+        <div class="pulsanteAccesoSpento">Proprietà: 
+            <span>Acceso</span>
+            <span>Spento</span>
+        </div>
+
         <script>
-            
+
             $(".pulsanteCGS span:nth-child(1)").click(function () {
-                if ($(".pulsanteCGS").hasClass("corsivo"))
-                    $("pulsanteCGS").removeClass("corsivo")
-                else
-                    $(this).addClass("corsivo")
+                if ($("#lavagnaC div#lavagna").hasClass("corsivo")){
+                    $(".pulsanteCGS span:nth-child(1)").css("font-weight" , "normal")
+                    $("#lavagnaC div#lavagna").removeClass("corsivo")  
+                
+                    
+        }else{
+                    $("#lavagnaC div#lavagna").addClass("corsivo")
+                    $(".pulsanteCGS span:nth-child(1)").css("font-weight" , "bold")
+                    
+        }})
+
+            $(".pulsanteCGS span:nth-child(2)").click(function () {
+                if ($("#lavagnaC div#lavagna").hasClass("grassetto")){
+                    $(".pulsanteCGS span:nth-child(2)").css("font-weight" , "normal")
+                    $("#lavagnaC div#lavagna").removeClass("grassetto") 
+                
+        }else{
+                    $("#lavagnaC div#lavagna").addClass("grassetto")
+                    $(".pulsanteCGS span:nth-child(2)").css("font-weight" , "bold")
+                
+        }})
+
+            $(".pulsanteCGS span:nth-child(3)").click(function () {
+                if ($("#lavagnaC div#lavagna").hasClass("sottolineato")){
+                    $(".pulsanteCGS span:nth-child(3)").css("font-weight" , "normal")
+                    $("#lavagnaC div#lavagna").removeClass("sottolineato") 
+                 
+        }else{
+                    $("#lavagnaC div#lavagna").addClass("sottolineato")
+                    $(".pulsanteCGS span:nth-child(3)").css("font-weight" , "bold")
+                
+        }})
 
 
-            })
+            
 
-        
+            
 
         </script>
     </body>

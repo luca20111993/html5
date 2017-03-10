@@ -21,20 +21,35 @@ div#lavagna {
     position: relative;
     top: 10px;
     left: 10px;
-    border: 1px solid black;
+    
     width: 300px;
     height: 200px;
     
 }
 
 
+.pulsanteCGS  , .pulsanteAccesoSpento{
+    font-size: 14px
+}
 
+.pulsanteCGS span , .pulsanteAccesoSpento span {
+    cursor: pointer;
+}
 
-
-.pulsanteCGS {
+.pulsanteAccesoSpento{
+    position: absolute;
+    top: 60px;
     
 }
 
 .corsivo{
-    
+    font-style: italic;
+}
+
+.grassetto {
+    font-weight: bold
+}
+
+.sottolineato{
+    text-decoration: underline;
 }
